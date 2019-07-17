@@ -1,5 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@font-face {
+  font-family: "Peace Sans";
+  src: url("fonts/Peace Sans/Peace Sans.otf");
+}
 
 body {
-  font-family: 'montserrat', sans-serif;
+  font-family: "Peace Sans";
+}
+
+.bigBox {
+  display: block;
+  margin-left: 20px;
 }

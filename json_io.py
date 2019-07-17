@@ -23,7 +23,7 @@ def output():
         return render_template(
             'error.html',
             title="Bruh.",
-            subtitle="You need an API key"
+            subtitle="You need an API key."
         )
     if user_key not in valid_keys:
         return render_template(
