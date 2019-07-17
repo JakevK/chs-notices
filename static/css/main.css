@@ -1,10 +1,7 @@
-@font-face {
-  font-family: "Peace Sans";
-  src: url("fonts/Peace Sans/Peace Sans.otf");
-}
+@import url('https://fonts.googleapis.com/css?family=Archivo|Muli&display=swap');
 
 body {
-  font-family: "Peace Sans";
+  font-family: 'Muli', sans-serif;
 }
 
 .bigBox {
