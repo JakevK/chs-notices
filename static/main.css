@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,500|Muli|Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bigBox {
+  display: block;
+  margin-left: 20px;
+}
+
+h1 {
+  font-family: 'Muli', sans-serif;
+}
+
+.subtitle {
+  font-size: 1.1em;
+}
+
+a {
+  color: rgb(45, 111, 189);
+  text-decoration: none;
+}
+
+.button {
+  background-color: rgb(44, 124, 170);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.button:hover {
+  color: rgb(64, 64, 64);
+  background-color: rgb(179, 179, 179);
+}
