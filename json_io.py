@@ -1,7 +1,10 @@
 #! python3
 
 from flask import Flask, render_template, jsonify, request, send_from_directory
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 import notices, json, os
 
