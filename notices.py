@@ -19,9 +19,14 @@ def get_notices(date=''):
 
     # dictionary to store the data
     table_data = {
+        "Date": {},
         "Meetings/Practices": {},
         "Notices": {}
     }
+
+    date = soup.select('h4.text-xs-center')[0].getText()
+    print(date)
+    table_data["Date"] = date
 
     # separate 2 sections of the table
     table_meetings = table[0]

@@ -43,6 +43,7 @@ def output():
         date = request.args['date']
     else:
         date = ''
+
     notices_table = notices.get_notices(date)
     return jsonify(notices_table)
 
