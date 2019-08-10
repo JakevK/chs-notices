@@ -13,6 +13,7 @@ import notices, json, os
 valid_keys = ['epic', 'yef']
 
 
+
 @app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
@@ -54,6 +55,27 @@ def formatted():
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
+
+
+# --- Error handlers --- #
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template(
+        'error.html',
+        title="Error 404",
+        subtitle="Page not found."
+    )
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template(
+        'error.html',
+        title="Error 500",
+        subtitle="Internal server error."
+    )
+
 
 if __name__ == "__main__":
     app.run()
