@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='formatted/no_flex.css') }}">
+  <title>Notices</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="header-main">Daily Notices</div>
+    <div class="header-date" id="status-date">Loading notices...</div>
+
+    <form name="dateForm" class="form-date">
+      <input type="date" name="date" onchange="submit()"/>
+    </form>
+
+    <div class="table" id="table">
+
+      <div class="table-header">
+        <div class="table-header-text">
+          Meetings/practices
+        </div>
+      </div>
+
+      <div id="meetingsSection">
+        <!--
+        <div class="table-row">
+          <div class="table-content-left">
+            <div class="table-content-left-text">
+              All
+            </div>
+          </div>
+          <div class="table-content-right">
+            <div class="table-content-right-top-grid">
+              <div class="table-content-right-heading">CHS Writing group</div>
+              <div class="table-content-right-location table-content-right-small">M6</div>
+              <div class="table-content-right-time table-content-right-small">Thu 31 May 12.25</div>
+              <div class="table-content-right-staff table-content-right-small">DWA</div>
+            </div>
+            <div class="table-content-right-bottom">Many thanks to all of you who have entered and paid!! If you have yet to sign your team and team name up with Mrs. Beer, please come to the meeting to do so. I need a list of all teams, team names and team members :)</div>
+          </div>
+        </div>
+        -->
+      </div>
+
+      <div class="table-header">
+        <div class="table-header-text">
+          Notices
+        </div>
+      </div>
+
+      <div id="noticesSection">
+        <!--
+        <div class="table-row">
+          <div class="table-content-left">
+            <div class="table-content-left-text">
+              All
+            </div>
+          </div>
+          <div class="table-content-right">
+            <div class="table-content-right-top-grid">
+              <div class="table-content-right-heading">CHS Writing group</div>
+              <div class="table-content-right-location table-content-right-small">[EMPTY]</div>
+              <div class="table-content-right-time table-content-right-small">[EMPTY]</div>
+              <div class="table-content-right-staff table-content-right-small">DWA</div>
+            </div>
+            <div class="table-content-right-bottom">Many thanks to all of you who have entered and paid!! If you have yet to sign your team and team name up with Mrs. Beer, please come to the meeting to do so. I need a list of all teams, team names and team members :)</div>
+          </div>
+        </div>
+        -->
+      </div>
+
+    </div>
+
+  </div>
+
+<script src="{{ url_for('static', filename='formatted/notices.js') }}" charset="utf-8"></script>
+</body>
+</html>

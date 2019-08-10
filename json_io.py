@@ -22,7 +22,7 @@ def documentation():
     return render_template('docs.html')
 
 
-@app.route('/notices', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def output():
     if 'key' in request.args:
         user_key = request.args['key']
@@ -46,6 +46,10 @@ def output():
 
     notices_table = notices.get_notices(date)
     return jsonify(notices_table)
+
+@app.route('/notices', methods=['GET'])
+def formatted():
+    return render_template('notices.html')
 
 @app.route('/favicon.ico')
 def favicon():
