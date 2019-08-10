@@ -5,7 +5,7 @@ var request = new XMLHttpRequest();
 
 function loadNotices(date) {
 
-  request.open('GET', 'https://chs-notices.herokuapp.com/notices?key=epic&date=' + date + '&' + new Date().getTime(), true);
+  request.open('GET', 'https://chs-notices.herokuapp.com/api?key=epic&date=' + date + '&' + new Date().getTime(), true);
 
   request.onload = function() {
     // Begin accessing JSON data here
