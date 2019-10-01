@@ -75,4 +75,40 @@ def get_notices(date=''):
         #json.dump(table_data, fp)
 
 
+# todo: this function
+def parse_text(json_in):
+    result = ""
+
+    notices = json_in["Notices"]
+    for notice in notices.keys():
+        curr_parsed = f"""
+{notice}
+{format_blank(notices[notice], "Staff")}
+{format_blank(notices[notice], "Category")}
+{format_blank(notices[notice], "Message")}
+
+"""
+        result += curr_parsed
+
+
+    meetings = json_in["Meetings/Practices"]
+    for meeting in meetings.keys():
+        curr_parsed = f"""
+{meeting}
+{format_blank(meetings[meeting], "Staff")}
+{format_blank(meetings[meeting], "Category")}
+{format_blank(meetings[meeting], "Time")}
+{format_blank(meetings[meeting], "Message")}
+
+"""
+        result += curr_parsed
+
+
+    return result
+
+
+def format_blank(element, key):
+    return element[key] if element[key] != "" else f"No {key.lower()} given"
+
+
 get_notices()

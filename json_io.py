@@ -48,9 +48,25 @@ def output():
     notices_table = notices.get_notices(date)
     return jsonify(notices_table)
 
+
+@app.route('/text', methods=['GET'])
+def plaintext():
+    if 'date' in request.args:
+        date = request.args['date']
+    else:
+        date = ''
+
+    raw_json =  notices.get_notices(date)
+
+    out = notices.parse_text(raw_json)
+
+    return render_template('rawtext.html', content=out)
+
+
 @app.route('/notices', methods=['GET'])
 def formatted():
     return render_template('notices.html')
+
 
 @app.route('/favicon.ico')
 def favicon():
