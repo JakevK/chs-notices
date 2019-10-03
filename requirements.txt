@@ -5,3 +5,4 @@ Jinja2==2.10.1
 pipenv==2018.11.26
 requests==2.21.0
 selenium==3.141.0
+gunicorn==19.0.0
